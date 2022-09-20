@@ -4,9 +4,17 @@ import Checklist from './Checklist';
 import React, { useEffect, useState } from 'react';
 import faceMount from './assets/face_mount.png'
 import './App.css';
+import { Button, InputNumber } from 'antd';
 
 function importAll(r) {
   return r.keys().map(r);
+}
+
+function downloadImage(b64, name) {
+  const link = document.createElement('a');
+  link.download = name
+  link.href = b64;
+  link.click();
 }
 
 const backgrounds = importAll(require.context('./assets/bg', false, /\.(png|jpe?g|svg)$/));
@@ -21,19 +29,63 @@ function App() {
   const [left, setLeft] = useState(lefts[0]);
   const [right, setRight] = useState(rights[0]);
   const [face, setFace] = useState(faces[0]);
-  const [image, setImage] = useState(null);
+  const [name, setName] = useState(0);
+
   const downloadRef = React.createRef();
 
+  const randomize = () => {
+    setBg(backgrounds[Math.floor(Math.random() * backgrounds.length)]);
+    setShield(shields[Math.floor(Math.random() * shields.length)]);
+    setLeft(lefts[Math.floor(Math.random() * lefts.length)]);
+    setRight(rights[Math.floor(Math.random() * rights.length)]);
+    setFace(faces[Math.floor(Math.random() * faces.length)]);
+  };
+
+  const download = React.useCallback(() => {
+    mergeImages([bg, shield, left, right, faceMount, face]).then((b64) => downloadImage(b64, `${name}.png`));
+    setName(name + 1);
+    randomize();
+  }, [bg, shield, left, right, face, name, setName])
+
   useEffect(() => {
-    mergeImages([bg, shield, left, right, faceMount, face]).then((b64) => setImage(b64));
-  }, [bg, shield, left, right, face]);
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        if (window.pressed) return;
+        downloadRef.current.click();
+      }
+
+      if (e.key === ' ') {
+        e.preventDefault();
+        if (window.pressed) return;
+        randomize();
+      }
+
+      window.pressed = true
+    })
+
+    window.addEventListener('keyup', (e) => {
+      e.preventDefault();
+      window.pressed = false
+    })
+  }, [downloadRef, setName, name, download]);
 
   return (
     <div className="App">
       <header className="App-header">
-        <img alt="preview" src={image} style={{ width: 512, height: 512 }} />
+        <div style={{ position: 'relative', width: 512, height: 512 }}>
+          <img alt="" src={bg} style={{ position: 'absolute', width: 512, height: 512, top: 0, left: 0 }} />
+          <img alt="" src={shield} style={{ position: 'absolute', width: 512, height: 512, top: 0, left: 0 }} />
+          <img alt="" src={left} style={{ position: 'absolute', width: 512, height: 512, top: 0, left: 0 }} />
+          <img alt="" src={right} style={{ position: 'absolute', width: 512, height: 512, top: 0, left: 0 }} />
+          <img alt="" src={faceMount} style={{ position: 'absolute', width: 512, height: 512, top: 0, left: 0 }} />
+          <img alt="" src={face} style={{ position: 'absolute', width: 512, height: 512, top: 0, left: 0 }} />
+        </div>
         <br />
-        <a ref={downloadRef} download={'download.png'} href={image}>download</a>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
+          <InputNumber value={name} onChange={setName} />
+          <Button ref={downloadRef} onClick={download}>download</Button>
+        </div>
         <br />
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           <Checklist title="Background" items={backgrounds} selected={bg} onChange={e => setBg(e.target.value)} />
