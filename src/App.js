@@ -22,6 +22,7 @@ function App() {
   const [right, setRight] = useState(rights[0]);
   const [face, setFace] = useState(faces[0]);
   const [image, setImage] = useState(null);
+  const downloadRef = React.createRef();
 
   useEffect(() => {
     mergeImages([bg, shield, left, right, faceMount, face]).then((b64) => setImage(b64));
@@ -30,9 +31,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={image} style={{ width: 512, height: 512 }} />
+        <img alt="preview" src={image} style={{ width: 512, height: 512 }} />
         <br />
-        <button>download</button>
+        <a ref={downloadRef} download={'download.png'} href={image}>download</a>
         <br />
         <div style={{ display: 'flex', flexDirection: 'row' }}>
           <Checklist title="Background" items={backgrounds} selected={bg} onChange={e => setBg(e.target.value)} />
