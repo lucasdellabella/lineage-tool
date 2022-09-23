@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ant-space-item {
+  width: 100%;
+}
+
+.ant-space-item :hover {
+  background-color: #f5f5f5;
+}
