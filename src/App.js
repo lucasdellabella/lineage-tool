@@ -219,17 +219,46 @@ function App() {
           />
         </div>
         <br />
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <Input
-            value={crestName}
-            onChange={(e) => {
-              console.log(e.target.value);
-              setCrestName(e.target.value);
-            }}
+        <div style={{ width: "300px", position: "relative" }}>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <Input
+              value={crestName}
+              maxLength="32"
+              status={
+                crestName.length >= 30
+                  ? crestName.length < 32
+                    ? "warning"
+                    : "error"
+                  : null
+              }
+              onChange={(e) => {
+                console.log(e.target.value);
+                setCrestName(e.target.value);
+              }}
+            />
+            {crestName.length > 25 ? (
+              <span
+                style={{
+                  ...(crestName.length < 30
+                    ? { color: "green" }
+                    : crestName.length < 32
+                    ? { color: "orange" }
+                    : { color: "red" }),
+                  position: " absolute",
+                  right: 5,
+                  top: 0,
+                }}
+              >
+                {crestName.length}
+              </span>
+            ) : null}
+          </div>
+          <div style={{ display: "flex", flexDirection: "row" }}></div>
+          <InputNumber
+            value={count}
+            onChange={setCount}
+            style={{ width: "100%" }}
           />
-        </div>
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <InputNumber value={count} onChange={setCount} />
           <Button ref={downloadRef} onClick={download}>
             download
           </Button>
