@@ -48,7 +48,7 @@ const extractName = (name) => {
 };
 
 function App() {
-  const crestCountFromLS = localStorage.getItem("crestCount");
+  const crestCountFromLS = JSON.parse(localStorage.getItem("crestCount"));
   const assetCountsFromLS = JSON.parse(localStorage.getItem("assetCounts"));
 
   const [bg, setBg] = useState(backgrounds[0]);
@@ -91,7 +91,6 @@ function App() {
   };
 
   const randomize = () => {
-    console.log("randomize");
     const shieldIndex = rollForAsset(shields);
     const leftIndex = rollForAsset(lefts);
     const rightIndex = rollForAsset(rights);
@@ -123,6 +122,7 @@ function App() {
     };
     setAssetCounts(newAssetCounts);
     setCount(newCrestCount);
+    setCrestName("");
 
     localStorage.setItem("crestCount", newCrestCount);
     localStorage.setItem("assetCounts", JSON.stringify(newAssetCounts));
@@ -239,7 +239,6 @@ function App() {
                   : null
               }
               onChange={(e) => {
-                console.log(e.target.value);
                 setCrestName(e.target.value);
               }}
             />
