@@ -3,7 +3,7 @@ import Checklist from "./Checklist";
 import React, { useEffect, useState } from "react";
 import faceMount from "./assets/face_mount.png";
 import "./App.css";
-import { Radio, Typography, Button, InputNumber } from "antd";
+import { Radio, Typography, Button, InputNumber, Input } from "antd";
 import downloadMetadata from "./downloadMetadata";
 
 const { Title } = Typography;
@@ -63,6 +63,7 @@ function App() {
       {}
     )
   );
+  const [crestName, setCrestName] = useState("");
 
   const getCrestName = () => {
     return [shield, left, right, face]
@@ -105,7 +106,7 @@ function App() {
   };
 
   const download = React.useCallback(() => {
-    const name = getCrestName();
+    const name = crestName;
     const assetNames = getAssetNames();
     mergeImages([bg, shield, left, right, faceMount, face]).then((b64) => {
       downloadImage(b64, `${count}.png`);
@@ -120,17 +121,17 @@ function App() {
     });
     setCount(count + 1);
     randomize();
-  }, [bg, shield, left, right, face, count, setCount]);
+  }, [bg, shield, left, right, face, count, setCount, crestName]);
 
   useEffect(() => {
-    window.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "\\") {
         e.preventDefault();
         if (window.pressed) return;
         downloadRef.current.click();
       }
 
-      if (e.key === " ") {
+      if (e.key === "Enter") {
         e.preventDefault();
         if (window.pressed) return;
         randomize();
@@ -139,17 +140,16 @@ function App() {
       window.pressed = true;
     });
 
-    window.addEventListener("keyup", (e) => {
+    document.addEventListener("keyup", (e) => {
       e.preventDefault();
       window.pressed = false;
     });
   }, [downloadRef, setCount, count, download]);
 
-  debugger;
   return (
     <div className="App">
       <header className="App-header">
-        <Title level={2}>{getCrestName()}</Title>
+        <Title level={2}>{crestName || "_"}</Title>
         <div style={{ position: "relative", width: 512, height: 512 }}>
           <img
             alt=""
@@ -219,6 +219,15 @@ function App() {
           />
         </div>
         <br />
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <Input
+            value={crestName}
+            onChange={(e) => {
+              console.log(e.target.value);
+              setCrestName(e.target.value);
+            }}
+          />
+        </div>
         <div style={{ display: "flex", flexDirection: "row" }}>
           <InputNumber value={count} onChange={setCount} />
           <Button ref={downloadRef} onClick={download}>
