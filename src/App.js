@@ -48,29 +48,26 @@ const extractName = (name) => {
 };
 
 function App() {
+  const crestCountFromLS = localStorage.getItem("crestCount");
+  const assetCountsFromLS = JSON.parse(localStorage.getItem("assetCounts"));
+
   const [bg, setBg] = useState(backgrounds[0]);
   const [shield, setShield] = useState(shields[0]);
   const [left, setLeft] = useState(lefts[0]);
   const [right, setRight] = useState(rights[0]);
   const [face, setFace] = useState(faces[0]);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(crestCountFromLS || 0);
   const [assetCounts, setAssetCounts] = useState(
-    [...shields, ...lefts, ...rights, ...faces].reduce(
-      (agg, cur) => ({
-        ...agg,
-        [cur]: 0,
-      }),
-      {}
-    )
+    assetCountsFromLS ||
+      [...shields, ...lefts, ...rights, ...faces].reduce(
+        (agg, cur) => ({
+          ...agg,
+          [cur]: 0,
+        }),
+        {}
+      )
   );
   const [crestName, setCrestName] = useState("");
-
-  const getCrestName = () => {
-    return [shield, left, right, face]
-      .map(extractName)
-      .map((s) => s.substring(0, 5))
-      .join("_");
-  };
 
   const getAssetNames = () => {
     return {
@@ -94,6 +91,7 @@ function App() {
   };
 
   const randomize = () => {
+    console.log("randomize");
     const shieldIndex = rollForAsset(shields);
     const leftIndex = rollForAsset(lefts);
     const rightIndex = rollForAsset(rights);
@@ -107,19 +105,28 @@ function App() {
 
   const download = React.useCallback(() => {
     const name = crestName;
+    if (crestName.length < 3) {
+      return;
+    }
     const assetNames = getAssetNames();
     mergeImages([bg, shield, left, right, faceMount, face]).then((b64) => {
       downloadImage(b64, `${count}.png`);
       downloadMetadata({ ...assetNames, name }, count);
     });
-    setAssetCounts({
+    const newCrestCount = count + 1;
+    const newAssetCounts = {
       ...assetCounts,
       [shield]: assetCounts[shield] + 1,
       [left]: assetCounts[left] + 1,
       [right]: assetCounts[right] + 1,
       [face]: assetCounts[face] + 1,
-    });
-    setCount(count + 1);
+    };
+    setAssetCounts(newAssetCounts);
+    setCount(newCrestCount);
+
+    localStorage.setItem("crestCount", newCrestCount);
+    localStorage.setItem("assetCounts", JSON.stringify(newAssetCounts));
+
     randomize();
   }, [bg, shield, left, right, face, count, setCount, crestName]);
 
@@ -144,7 +151,7 @@ function App() {
       e.preventDefault();
       window.pressed = false;
     });
-  }, [downloadRef, setCount, count, download]);
+  }, [downloadRef, setCount, count, download, randomize]);
 
   return (
     <div className="App">
