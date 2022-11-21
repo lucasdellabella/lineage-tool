@@ -1,10 +1,11 @@
 import mergeImages from "merge-images";
 import Checklist from "./Checklist";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import faceMount from "./assets/face_mount.png";
 import "./App.css";
 import { Radio, Typography, Button, InputNumber, Input } from "antd";
 import downloadMetadata from "./downloadMetadata";
+import { extractName } from "./utils";
 
 const { Title } = Typography;
 
@@ -36,16 +37,6 @@ const faces = importAll(
 );
 
 // File names are looking like 'myAsset.h45hC0dE.png' and we want to allow for periods in the filename
-const dropAssetSuffix = (c) =>
-  c
-    .split(".")
-    .slice(0, c.split(".").length - 2)
-    .join(".");
-
-const extractName = (name) => {
-  const prefixTrimmed = name.substring("/static/media/".length);
-  return dropAssetSuffix(prefixTrimmed);
-};
 
 function App() {
   const crestCountFromLS = JSON.parse(localStorage.getItem("crestCount"));
@@ -57,6 +48,23 @@ function App() {
   const [right, setRight] = useState(rights[0]);
   const [face, setFace] = useState(faces[0]);
   const [count, setCount] = useState(crestCountFromLS || 0);
+
+  const [lockedColumns, setLockedColumns] = useState({
+    left: false,
+    right: false,
+    shield: false,
+    face: false,
+  });
+
+  const toggleColumnLock = useCallback(
+    (colName) =>
+      setLockedColumns({
+        ...lockedColumns,
+        [colName]: !lockedColumns[colName],
+      }),
+    [setLockedColumns, lockedColumns]
+  );
+
   const [assetCounts, setAssetCounts] = useState(
     assetCountsFromLS ||
       [...shields, ...lefts, ...rights, ...faces].reduce(
@@ -81,26 +89,34 @@ function App() {
   const downloadRef = React.createRef();
 
   const rollForAsset = (assetList) => {
-    let assetIndex = Math.floor(Math.random() * shields.length);
+    let assetIndex = Math.floor(Math.random() * assetList.length);
     let assetKey = assetList[assetIndex];
     while (assetCounts[assetKey] >= 12) {
-      assetIndex = Math.floor(Math.random() * shields.length);
+      assetIndex = Math.floor(Math.random() * assetList.length);
       assetKey = assetList[assetIndex];
     }
     return assetIndex;
   };
 
-  const randomize = () => {
+  const randomize = useCallback(() => {
     const shieldIndex = rollForAsset(shields);
     const leftIndex = rollForAsset(lefts);
     const rightIndex = rollForAsset(rights);
     const faceIndex = rollForAsset(faces);
 
-    setShield(shields[shieldIndex]);
-    setLeft(lefts[leftIndex]);
-    setRight(rights[rightIndex]);
-    setFace(faces[faceIndex]);
-  };
+    if (!lockedColumns.shield) {
+      setShield(shields[shieldIndex]);
+    }
+    if (!lockedColumns.left) {
+      setLeft(lefts[leftIndex]);
+    }
+    if (!lockedColumns.right) {
+      setRight(rights[rightIndex]);
+    }
+    if (!lockedColumns.face) {
+      setFace(faces[faceIndex]);
+    }
+  }, [setShield, setLeft, setRight, setFace, lockedColumns]);
 
   const download = React.useCallback(() => {
     const name = crestName;
@@ -115,10 +131,10 @@ function App() {
     const newCrestCount = count + 1;
     const newAssetCounts = {
       ...assetCounts,
-      [shield]: assetCounts[shield] + 1,
-      [left]: assetCounts[left] + 1,
-      [right]: assetCounts[right] + 1,
-      [face]: assetCounts[face] + 1,
+      [shield]: (assetCounts[shield] || 0) + 1,
+      [left]: (assetCounts[left] || 0) + 1,
+      [right]: (assetCounts[right] || 0) + 1,
+      [face]: (assetCounts[face] || 0) + 1,
     };
     setAssetCounts(newAssetCounts);
     setCount(newCrestCount);
@@ -128,10 +144,10 @@ function App() {
     localStorage.setItem("assetCounts", JSON.stringify(newAssetCounts));
 
     randomize();
-  }, [bg, shield, left, right, face, count, setCount, crestName]);
+  }, [bg, shield, left, right, face, count, setCount, crestName, randomize]);
 
-  useEffect(() => {
-    document.addEventListener("keydown", (e) => {
+  const keydownEvtListener = useCallback(
+    (e) => {
       if (e.key === "\\") {
         e.preventDefault();
         if (window.pressed) return;
@@ -145,13 +161,25 @@ function App() {
       }
 
       window.pressed = true;
-    });
+    },
+    [downloadRef, randomize, lockedColumns]
+  );
 
-    document.addEventListener("keyup", (e) => {
-      e.preventDefault();
-      window.pressed = false;
-    });
-  }, [downloadRef, setCount, count, download, randomize]);
+  const keyupEvtListener = useCallback((e) => {
+    e.preventDefault();
+    window.pressed = false;
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("keydown", keydownEvtListener);
+    document.addEventListener("keyup", keyupEvtListener);
+
+    // must remove the old, now invalid event listeners when they change.
+    return () => {
+      document.removeEventListener("keydown", keydownEvtListener);
+      document.removeEventListener("keyup", keyupEvtListener);
+    };
+  }, [keydownEvtListener, keyupEvtListener]);
 
   return (
     <div className="App">
@@ -270,7 +298,16 @@ function App() {
           </Button>
         </div>
         <br />
-        <div style={{ display: "flex", flexDirection: "row" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            height: "200px",
+            overflow: "scroll",
+            border: "1px solid black",
+            flex: "1 0 auto",
+          }}
+        >
           <Radio
             style={{
               width: "100%",
@@ -281,25 +318,13 @@ function App() {
             value={bg}
           />
           <Checklist
-            title="Shield"
-            items={shields}
-            selected={shield}
-            assetCounts={assetCounts}
-            onChange={(e) => setShield(e.target.value)}
-          />
-          <Checklist
             title="Left"
             items={lefts}
             selected={left}
             assetCounts={assetCounts}
             onChange={(e) => setLeft(e.target.value)}
-          />
-          <Checklist
-            title="Right"
-            items={rights}
-            selected={right}
-            assetCounts={assetCounts}
-            onChange={(e) => setRight(e.target.value)}
+            toggleLockOverlay={() => toggleColumnLock("left")}
+            locked={lockedColumns["left"]}
           />
           <Checklist
             title="Face"
@@ -307,6 +332,26 @@ function App() {
             selected={face}
             assetCounts={assetCounts}
             onChange={(e) => setFace(e.target.value)}
+            toggleLockOverlay={() => toggleColumnLock("face")}
+            locked={lockedColumns["face"]}
+          />
+          <Checklist
+            title="Shield"
+            items={shields}
+            selected={shield}
+            assetCounts={assetCounts}
+            onChange={(e) => setShield(e.target.value)}
+            toggleLockOverlay={() => toggleColumnLock("shield")}
+            locked={lockedColumns["shield"]}
+          />
+          <Checklist
+            title="Right"
+            items={rights}
+            selected={right}
+            assetCounts={assetCounts}
+            onChange={(e) => setRight(e.target.value)}
+            toggleLockOverlay={() => toggleColumnLock("right")}
+            locked={lockedColumns["right"]}
           />
         </div>
       </header>

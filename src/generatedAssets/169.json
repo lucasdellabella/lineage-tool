@@ -1,0 +1,34 @@
+
+  {
+    "name": "Sheriffs of the Musical Scroll",
+    "symbol": "CREST",
+    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
+    "image": "169.png",
+    "attributes": [
+      {
+        "trait_type": "Centerpiece",
+        "value": "Gunslinger"
+      },
+      {
+        "trait_type": "Left Ornament",
+        "value": "Rootmason Flute"
+      },
+      {
+        "trait_type": "Right Ornament",
+        "value": "Prophet's Clasp"
+      },
+      {
+        "trait_type": "Back Plating",
+        "value": "The Many-Eyed One"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "0.png",
+          "type": "image/png"
+        }
+      ],
+      "category": "image"
+    }
+  } 

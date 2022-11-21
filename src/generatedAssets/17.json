@@ -1,0 +1,34 @@
+
+  {
+    "name": "Monks of the Reclaimed Garden",
+    "symbol": "CREST",
+    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
+    "image": "17.png",
+    "attributes": [
+      {
+        "trait_type": "Centerpiece",
+        "value": "Goliath Monk"
+      },
+      {
+        "trait_type": "Left Ornament",
+        "value": "Dalia's Reclamation"
+      },
+      {
+        "trait_type": "Right Ornament",
+        "value": "Sundew Lotus"
+      },
+      {
+        "trait_type": "Back Plating",
+        "value": "Garden of One Hundred Scents"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "0.png",
+          "type": "image/png"
+        }
+      ],
+      "category": "image"
+    }
+  } 
