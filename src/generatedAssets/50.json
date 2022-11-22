@@ -1,1 +1,16 @@
-{"name":"Oracles of Gibbun's Gold","symbol":"CREST","description":"<INSERT FLAVORFUL DESCRIPTION HERE>","image":"50.png","attributes":[{"trait_type":"Centerpiece","value":"Oracle"},{"trait_type":"Left Ornament","value":"Mycoconda"},{"trait_type":"Right Ornament","value":"Gibbun Staff"},{"trait_type":"Back Plating","value":"Treasure Chamber"}],"properties":{"files":[{"uri":"0.png","type":"image/png"}],"category":"image"}}
+{
+  "name": "Oracles of Gibbun's Gold",
+  "symbol": "CREST",
+  "description": "Stumbling into lost treasure, the Oracles of Gibbun's Gold used the wealth well and quickly rose in stature to local royalty. They're also known for their obsession with decomposition, be it fungi or poison. Now consorting and aligning themselves with the Gibbun leadership, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "50.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Oracle" },
+    { "trait_type": "Left Ornament", "value": "Mycoconda" },
+    { "trait_type": "Right Ornament", "value": "Gibbun Staff" },
+    { "trait_type": "Back Plating", "value": "Treasure Chamber" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

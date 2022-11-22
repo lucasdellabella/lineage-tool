@@ -1,34 +1,16 @@
-
-  {
-    "name": "Hunters of the Albino Skywinder",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "191.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Woodland Hunter"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Candescent Crow (Alabaster)"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Skywinder Symbol"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Moribund Mists"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Hunters of the Albino Skywinder",
+  "symbol": "CREST",
+  "description": "After losing many family members to decay and frailty within the Moribund Mists, those of the Hunters of the Albino Skywinder who made it out are strong. And certainly stronger than they look. They're also renowned for their ability to nullify magic, and travel unseen even amidst extraordinary mages. Now operating as members of the Skywinder Cult, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "191.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Woodland Hunter" },
+    { "trait_type": "Left Ornament", "value": "Candescent Crow (Alabaster)" },
+    { "trait_type": "Right Ornament", "value": "Skywinder Symbol" },
+    { "trait_type": "Back Plating", "value": "Moribund Mists" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

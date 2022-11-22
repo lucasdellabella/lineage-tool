@@ -1,34 +1,16 @@
-
-  {
-    "name": "Gunslingers of the Runic Shroom",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "125.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Gunslinger"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Primordyceps"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Skywinder Symbol"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Runic Inscription"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Gunslingers of the Runic Shroom",
+  "symbol": "CREST",
+  "description": "There are Rootmason carvings all over the heirlooms of the Gunslingers of the Runic Shroom. Why? How? They also have a heavy amount of Primordyceps in their diet. Recently they’ve been feeling a little… different. Now operating as members of the Skywinder Cult, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "125.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Gunslinger" },
+    { "trait_type": "Left Ornament", "value": "Primordyceps" },
+    { "trait_type": "Right Ornament", "value": "Skywinder Symbol" },
+    { "trait_type": "Back Plating", "value": "Runic Inscription" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

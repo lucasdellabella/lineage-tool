@@ -1,34 +1,16 @@
-
-  {
-    "name": "Borbins of the Mineral Pond",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "66.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Borbin"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Amoria's Mask"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Mineral Mold"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Mohoan Purification Pond"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Borbins of the Mineral Pond",
+  "symbol": "CREST",
+  "description": "Receiving aid from the Mohoe in a time of great need, the Borbins of the Mineral Pond were left with a deep seated gratitude towards the Mohoe. They're also known for their belief and allegiance to the semi-sentient forest, Amoria Now a member of a group researching the intersection of Groodu and Rootmason magics, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "66.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Borbin" },
+    { "trait_type": "Left Ornament", "value": "Amoria's Mask" },
+    { "trait_type": "Right Ornament", "value": "Mineral Mold" },
+    { "trait_type": "Back Plating", "value": "Mohoan Purification Pond" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

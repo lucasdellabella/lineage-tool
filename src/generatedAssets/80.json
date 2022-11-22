@@ -1,34 +1,19 @@
-
-  {
-    "name": "Moguls of the Blooming Meteor",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "80.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Horned Mogul"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Blossoming Boutonniere (Marigold)"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Anuran Fireflies"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Ruinous Storm"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Moguls of the Blooming Meteor",
+  "symbol": "CREST",
+  "description": "Surviving a hellish meteor shower early in the family history, are the Moguls of the Blooming Meteor blessed or cursed? They're also known for their strength, vitality, and good fortune. Now guiding travelers that attempt to cross the continent in the dead of night, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "80.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Horned Mogul" },
+    {
+      "trait_type": "Left Ornament",
+      "value": "Blossoming Boutonniere (Marigold)"
+    },
+    { "trait_type": "Right Ornament", "value": "Anuran Fireflies" },
+    { "trait_type": "Back Plating", "value": "Ruinous Storm" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

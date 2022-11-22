@@ -1,34 +1,16 @@
-
-  {
-    "name": "Oracles of the Floating Note",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "132.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Oracle"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Mohoan Lullaby"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Oasis Crab"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Mohoan Purification Pond"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Oracles of the Floating Note",
+  "symbol": "CREST",
+  "description": "Receiving aid from the Mohoe in a time of great need, the Oracles of the Floating Note were left with a deep seated gratitude towards the Mohoe. They're also known for their captivating music that seems to overwhelm listeners with ecstasy. Now residing atop the oasis crabs of Kathoon, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "132.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Oracle" },
+    { "trait_type": "Left Ornament", "value": "Mohoan Lullaby" },
+    { "trait_type": "Right Ornament", "value": "Oasis Crab" },
+    { "trait_type": "Back Plating", "value": "Mohoan Purification Pond" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

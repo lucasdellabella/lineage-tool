@@ -1,34 +1,19 @@
-
-  {
-    "name": "Corbins of the Shattered Scepter",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "109.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Olyphemus"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Flashmarble Fragment (Skywinder - Candescent)"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Gibbun Staff"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Shattered Cosmos"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Corbins of the Shattered Scepter",
+  "symbol": "CREST",
+  "description": "Seemingly appearing out of thin air, the Corbins of the Shattered Scepter aren’t even sure where they themselves are from. Without a known heritage to lean on, they identify as children of the cosmos. They're also known for their exceptional candescent flashmarble craftsmanship. Now consorting and aligning themselves with the Gibbun leadership, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "109.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Olyphemus" },
+    {
+      "trait_type": "Left Ornament",
+      "value": "Flashmarble Fragment (Skywinder - Candescent)"
+    },
+    { "trait_type": "Right Ornament", "value": "Gibbun Staff" },
+    { "trait_type": "Back Plating", "value": "Shattered Cosmos" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

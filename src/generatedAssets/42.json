@@ -1,34 +1,16 @@
-
-  {
-    "name": "Seers of the Prophet's Mists",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "42.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Farsighted Seer"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Groodu's Compassion"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Prophet's Clasp"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Moribund Mists"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Seers of the Prophet's Mists",
+  "symbol": "CREST",
+  "description": "After losing many family members to decay and frailty within the Moribund Mists, those of the Seers of the Prophet's Mists who made it out are strong. And certainly stronger than they look. They also owe a debt of gratitude to the Groodu for deliverance in their time of need. Now, after unfurling a cursed scroll and discovering secrets few others in Kharth know, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "42.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Farsighted Seer" },
+    { "trait_type": "Left Ornament", "value": "Groodu's Compassion" },
+    { "trait_type": "Right Ornament", "value": "Prophet's Clasp" },
+    { "trait_type": "Back Plating", "value": "Moribund Mists" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

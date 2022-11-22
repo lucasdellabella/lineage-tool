@@ -1,34 +1,16 @@
-
-  {
-    "name": "Shinobi of the Crimson Meteor",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "89.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Pineapple Ninja"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Fruit Incubator"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Goblets of Skourd"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Ruinous Storm"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Shinobi of the Crimson Meteor",
+  "symbol": "CREST",
+  "description": "Surviving a hellish meteor shower early in the family history, are the Shinobi of the Crimson Meteor blessed or cursed? They're also known for their stewardship of unripe Fruit Folk, and assisting with incubation when necessary. Now lying in boredom, hungering for war, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "89.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Pineapple Ninja" },
+    { "trait_type": "Left Ornament", "value": "Fruit Incubator" },
+    { "trait_type": "Right Ornament", "value": "Goblets of Skourd" },
+    { "trait_type": "Back Plating", "value": "Ruinous Storm" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

@@ -1,34 +1,16 @@
-
-  {
-    "name": "Primordial Criers of the Comet",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "152.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Capuchin Crier"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Primordyceps"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Goblets of Skourd"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Ruinous Storm"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Primordial Criers of the Comet",
+  "symbol": "CREST",
+  "description": "Surviving a hellish meteor shower early in the family history, are the Primordial Criers of the Comet blessed or cursed? They also have a heavy amount of Primordyceps in their diet. Recently they’ve been feeling a little… different. Now lying in boredom, hungering for war, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "152.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Capuchin Crier" },
+    { "trait_type": "Left Ornament", "value": "Primordyceps" },
+    { "trait_type": "Right Ornament", "value": "Goblets of Skourd" },
+    { "trait_type": "Back Plating", "value": "Ruinous Storm" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

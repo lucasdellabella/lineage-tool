@@ -1,1 +1,16 @@
-{"name":"Dorbins of the Lavish Condenser","symbol":"CREST","description":"<INSERT FLAVORFUL DESCRIPTION HERE>","image":"160.png","attributes":[{"trait_type":"Centerpiece","value":"Cinnabar"},{"trait_type":"Left Ornament","value":"Moonlight Condenser"},{"trait_type":"Right Ornament","value":"Satura's Experimental Shield"},{"trait_type":"Back Plating","value":"Treasure Chamber"}],"properties":{"files":[{"uri":"0.png","type":"image/png"}],"category":"image"}}
+{
+  "name": "Dorbins of the Lavish Condenser",
+  "symbol": "CREST",
+  "description": "Stumbling into lost treasure, the Dorbins of the Lavish Condenser used the wealth well and quickly rose in stature to local royalty. They also capture moonlight in a moonlight condenser - old technology created by the Gibbun in order to distill moonlight for further processing. Now serving as guards-for-hire using their high-tech defensive equipment, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "160.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Cinnabar" },
+    { "trait_type": "Left Ornament", "value": "Moonlight Condenser" },
+    { "trait_type": "Right Ornament", "value": "Satura's Experimental Shield" },
+    { "trait_type": "Back Plating", "value": "Treasure Chamber" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

@@ -1,16 +1,1 @@
-{
-  "name": "Crusaders of Sunset's Mercy",
-  "symbol": "CREST",
-  "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-  "image": "103.png",
-  "attributes": [
-    { "trait_type": "Centerpiece", "value": "Baboon Crusader" },
-    { "trait_type": "Left Ornament", "value": "Groodu's Compassion" },
-    { "trait_type": "Right Ornament", "value": "Prophet's Clasp" },
-    { "trait_type": "Back Plating", "value": "Kharth's Daggers (Sunset)" }
-  ],
-  "properties": {
-    "files": [{ "uri": "0.png", "type": "image/png" }],
-    "category": "image"
-  }
-}
+{"name":"Crusaders of Sunset's Mercy","symbol":"CREST","description":"Hailing from the the regions surrounding Kharth’s Daggers, the Crusaders of Sunset's Mercy owe a debt of gratitude to the Groodu for deliverance in their time of need. Now, after unfurling a cursed scroll and discovering secrets few others in Kharth know, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?","image":"103.png","attributes":[{"trait_type":"Centerpiece","value":"Baboon Crusader"},{"trait_type":"Left Ornament","value":"Groodu's Compassion"},{"trait_type":"Right Ornament","value":"Prophet's Clasp"},{"trait_type":"Back Plating","value":"Kharth's Daggers (Sunset)"}],"properties":{"files":[{"uri":"0.png","type":"image/png"}],"category":"image"}}

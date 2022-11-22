@@ -1,34 +1,16 @@
-
-  {
-    "name": "Runic Monks of Clouddrop",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "167.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Goliath Monk"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Clouddrop Basin"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Satura's Experimental Shield"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Runic Inscription"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Runic Monks of Clouddrop",
+  "symbol": "CREST",
+  "description": "There are Rootmason carvings all over the heirlooms of the Runic Monks of Clouddrop. Why? How? They're also known for frequenting clouddrop basin. Though it’s not clear why. Now serving as guards-for-hire using their high-tech defensive equipment, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "167.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Goliath Monk" },
+    { "trait_type": "Left Ornament", "value": "Clouddrop Basin" },
+    { "trait_type": "Right Ornament", "value": "Satura's Experimental Shield" },
+    { "trait_type": "Back Plating", "value": "Runic Inscription" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

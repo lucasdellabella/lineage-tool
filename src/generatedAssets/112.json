@@ -1,34 +1,16 @@
-
-  {
-    "name": "Wardens of the Cosmos",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "112.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Autumn Warden"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Groodu's Compassion"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Astronomer's Console"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Shattered Cosmos"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Wardens of the Cosmos",
+  "symbol": "CREST",
+  "description": "Seemingly appearing out of thin air, the Wardens of the Cosmos aren’t even sure where they themselves are from. Without a known heritage to lean on, they identify as children of the cosmos. They also owe a debt of gratitude to the Groodu for deliverance in their time of need. Now armed with knowledge of the stars, moons, and tides, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "112.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Autumn Warden" },
+    { "trait_type": "Left Ornament", "value": "Groodu's Compassion" },
+    { "trait_type": "Right Ornament", "value": "Astronomer's Console" },
+    { "trait_type": "Back Plating", "value": "Shattered Cosmos" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

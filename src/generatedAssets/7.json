@@ -1,1 +1,19 @@
-{"name":"Chamellians of the Lotus Crown ","symbol":"CREST","description":"<INSERT FLAVORFUL DESCRIPTION HERE>","image":"7.png","attributes":[{"trait_type":"Centerpiece","value":"Chamellia"},{"trait_type":"Left Ornament","value":"Flashmarble Fragment (Skywinder - Marble)"},{"trait_type":"Right Ornament","value":"Sundew Lotus"},{"trait_type":"Back Plating","value":"Treasure Chamber"}],"properties":{"files":[{"uri":"0.png","type":"image/png"}],"category":"image"}}
+{
+  "name": "Chamellians of the Lotus Crown ",
+  "symbol": "CREST",
+  "description": "Stumbling into lost treasure, the Chamellians of the Lotus Crown  used the wealth well and quickly rose in stature to local royalty. They're also known for their exceptional flashmarble craftsmanship. Now, blessed with a sundew lotus due to their ties with the Groodu, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "7.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Chamellia" },
+    {
+      "trait_type": "Left Ornament",
+      "value": "Flashmarble Fragment (Skywinder - Marble)"
+    },
+    { "trait_type": "Right Ornament", "value": "Sundew Lotus" },
+    { "trait_type": "Back Plating", "value": "Treasure Chamber" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

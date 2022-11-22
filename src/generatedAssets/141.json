@@ -1,34 +1,16 @@
-
-  {
-    "name": "Silents of the Candescent Cosmos",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "141.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Silent"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Candescent Crow (Vibrant)"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Satura's Experimental Shield"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Shattered Cosmos"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Silents of the Candescent Cosmos",
+  "symbol": "CREST",
+  "description": "Seemingly appearing out of thin air, the Silents of the Candescent Cosmos aren’t even sure where they themselves are from. Without a known heritage to lean on, they identify as children of the cosmos. They're also known as handlers, friends of candescent crows, and have since developed a sixth sense to detect nearby magic use. Now serving as guards-for-hire using their high-tech defensive equipment, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "141.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Silent" },
+    { "trait_type": "Left Ornament", "value": "Candescent Crow (Vibrant)" },
+    { "trait_type": "Right Ornament", "value": "Satura's Experimental Shield" },
+    { "trait_type": "Back Plating", "value": "Shattered Cosmos" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

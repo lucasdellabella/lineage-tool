@@ -1,1 +1,16 @@
-{"name":"Twin-Winged Borbins of the Comet","symbol":"CREST","description":"<INSERT FLAVORFUL DESCRIPTION HERE>","image":"151.png","attributes":[{"trait_type":"Centerpiece","value":"Borbin"},{"trait_type":"Left Ornament","value":"Soothounds"},{"trait_type":"Right Ornament","value":"Blinkrabbit's Paw"},{"trait_type":"Back Plating","value":"Ruinous Storm"}],"properties":{"files":[{"uri":"0.png","type":"image/png"}],"category":"image"}}
+{
+  "name": "Twin-Winged Borbins of the Comet",
+  "symbol": "CREST",
+  "description": "Surviving a hellish meteor shower early in the family history, are the Twin-Winged Borbins of the Comet blessed or cursed? They're also known for their skill in shadow magic. Specifically moving from shadow and shadow, smuggling goods within the shadows of clueless civilians. Now armed with good fortune and high spirits, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "151.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Borbin" },
+    { "trait_type": "Left Ornament", "value": "Soothounds" },
+    { "trait_type": "Right Ornament", "value": "Blinkrabbit's Paw" },
+    { "trait_type": "Back Plating", "value": "Ruinous Storm" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}

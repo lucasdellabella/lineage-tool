@@ -1,34 +1,16 @@
-
-  {
-    "name": "Kings of the Runic Console",
-    "symbol": "CREST",
-    "description": "<INSERT FLAVORFUL DESCRIPTION HERE>",
-    "image": "72.png",
-    "attributes": [
-      {
-        "trait_type": "Centerpiece",
-        "value": "Crowned Kings"
-      },
-      {
-        "trait_type": "Left Ornament",
-        "value": "Moonlight Condenser"
-      },
-      {
-        "trait_type": "Right Ornament",
-        "value": "Astronomer's Console"
-      },
-      {
-        "trait_type": "Back Plating",
-        "value": "Runic Inscription"
-      }
-    ],
-    "properties": {
-      "files": [
-        {
-          "uri": "0.png",
-          "type": "image/png"
-        }
-      ],
-      "category": "image"
-    }
-  } 
+{
+  "name": "Kings of the Runic Console",
+  "symbol": "CREST",
+  "description": "There are Rootmason carvings all over the heirlooms of the Kings of the Runic Console. Why? How? They also capture moonlight in a moonlight condenser - old technology created by the Gibbun in order to distill moonlight for further processing. Now armed with knowledge of the stars, moons, and tides, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "image": "72.png",
+  "attributes": [
+    { "trait_type": "Centerpiece", "value": "Crowned Kings" },
+    { "trait_type": "Left Ornament", "value": "Moonlight Condenser" },
+    { "trait_type": "Right Ornament", "value": "Astronomer's Console" },
+    { "trait_type": "Back Plating", "value": "Runic Inscription" }
+  ],
+  "properties": {
+    "files": [{ "uri": "0.png", "type": "image/png" }],
+    "category": "image"
+  }
+}
