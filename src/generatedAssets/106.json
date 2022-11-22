@@ -4,7 +4,7 @@
   "description": "Receiving aid from the Mohoe in a time of great need, the Corbins of the Explorer's Lotus were left with a deep seated gratitude towards the Mohoe. They're also known for their skill at retrieving long lost relics… via methods savory and unsavory. Now, blessed with a sundew lotus due to their ties with the Groodu, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
   "image": "106.png",
   "attributes": [
-    { "trait_type": "Centerpiece", "value": "Olyphemus" },
+    { "trait_type": "Centerpiece", "value": "Corbin" },
     { "trait_type": "Left Ornament", "value": "Explorer's Inventory" },
     { "trait_type": "Right Ornament", "value": "Sundew Lotus" },
     { "trait_type": "Back Plating", "value": "Mohoan Purification Pond" }

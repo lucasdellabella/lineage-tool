@@ -1,10 +1,10 @@
 {
-  "name": "Chamellians of the Lotus Crown ",
+  "name": "Camellians of the Lotus Crown",
   "symbol": "CREST",
-  "description": "Stumbling into lost treasure, the Chamellians of the Lotus Crown  used the wealth well and quickly rose in stature to local royalty. They're also known for their exceptional flashmarble craftsmanship. Now, blessed with a sundew lotus due to their ties with the Groodu, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "description": "Stumbling into lost treasure, the Camellians of the Lotus Crown  used the wealth well and quickly rose in stature to local royalty. They're also known for their exceptional flashmarble craftsmanship. Now, blessed with a sundew lotus due to their ties with the Groodu, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
   "image": "7.png",
   "attributes": [
-    { "trait_type": "Centerpiece", "value": "Chamellia" },
+    { "trait_type": "Centerpiece", "value": "Camellia" },
     {
       "trait_type": "Left Ornament",
       "value": "Flashmarble Fragment (Skywinder - Marble)"

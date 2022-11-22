@@ -24,7 +24,7 @@ const backs = {
     "Part of the community of divers searching for the grave of Akak Gagak",
   "View Through The Thespin Skytram":
     "Hailing from the Rootmason capital city of Thespin",
-  "Wanderer's Refuge": "Often found in nearby Wanderer’s Refuge",
+  "Wanderer's Refuge": "Often found in and around Wanderer’s Refuge",
   "Widow's Peak": "Hailing from Widow’s Peak",
   "Rising Gemlanterns": "Hailing from the fjords of Wuund",
   "Xanthan Forest":
@@ -63,7 +63,7 @@ const lefts = {
   "Blossoming Boutonniere (Marigold)":
     "are known for their strength, vitality, and good fortune.",
   "Blossoming Boutonniere (Rose)":
-    "Are known for their love, romance, joy and great luck.",
+    "are known for their love, romance, joy and great luck.",
   "Candescent Crow (Alabaster)":
     "are renowned for their ability to nullify magic, and travel unseen even amidst extraordinary mages.",
   "Candescent Crow (Vibrant)":
@@ -82,7 +82,7 @@ const lefts = {
     "are known to dive deep for treasures and marine resources.",
   "Dune Surfer": "are known for their adept handling of dune surfers.",
   "Explorer's Inventory":
-    "are known for their skill at retrieving long lost relics… via methods savory and unsavory.",
+    "are known for their skill at retrieving long lost relics… via methods savory and unsavory",
   "Flashmarble Fragment (Skywinder - Candescent)":
     "are known for their exceptional candescent flashmarble craftsmanship.",
   "Flashmarble Fragment (Skywinder - Deep Forest)":
@@ -187,7 +187,6 @@ const createCrestDescription = ({
       "Shattered Cosmos",
     ].includes(backName)
   ) {
-    console.log(`${crestName}`);
     return `${backs[backName](crestName)} ${lefts[leftName]} ${
       rights[rightName]
     }, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?`;

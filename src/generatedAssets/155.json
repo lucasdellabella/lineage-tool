@@ -1,10 +1,10 @@
 {
-  "name": "The Pond-Wisp Chamellians",
+  "name": "The Pond-Wisp Camellians",
   "symbol": "CREST",
-  "description": "Receiving aid from the Mohoe in a time of great need, the The Pond-Wisp Chamellians were left with a deep seated gratitude towards the Mohoe. They're also known for their exceptional candescent flashmarble craftsmanship. Now finished uncovering the origin of the Clouddrop wisps, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
+  "description": "Receiving aid from the Mohoe in a time of great need, the The Pond-Wisp Camellians were left with a deep seated gratitude towards the Mohoe. They're also known for their exceptional candescent flashmarble craftsmanship. Now finished uncovering the origin of the Clouddrop wisps, they look towards the future with a glint in their eye. Their future is bright. The only question: what comes next?",
   "image": "155.png",
   "attributes": [
-    { "trait_type": "Centerpiece", "value": "Chamellia" },
+    { "trait_type": "Centerpiece", "value": "Camellia" },
     {
       "trait_type": "Left Ornament",
       "value": "Flashmarble Fragment (Skywinder - Candescent)"
